@@ -1,0 +1,34 @@
+#!/bin/bash
+
+## initial commands##
+sudo docker search ubuntu
+sudo docker search nagios
+
+sudo docker pull ubuntu
+sudo docker pull jasonrivers/nagios
+
+sudo docker rmi php
+sudo docker images
+
+sudo docker run -d centos /bin/bash -c 'counter=0 ; while true ; do echo $counter ; let counter= counter+1 ; sleep 1; done'
+sudo docker run -d ubuntu /bin/bash -c 'while true ; do echo net4u ; sleep 1; done'
+
+## show logs of containers ##
+sudo docker logs <name of container>
+sudo docker logs'sudo docker ps | grep ubuntu | awk '{print $1}'
+
+## create ubuntu continer ##
+for item in {1..10}
+do
+	sudo docker run -d ubuntu /bin/bash -c 'while true ; do echo net4u ; sleep 1; done' 2>/dev/null
+done
+
+sudo docker ps
+
+## destroy only ubuntu containers ##
+for item in 'sudo dokcer ps | grep ubuntu | awk '{print $1}
+do
+	sudo docker rm -f $item
+done
+
+sudo docker ps
