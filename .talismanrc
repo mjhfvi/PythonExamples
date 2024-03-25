@@ -1,0 +1,13 @@
+# If you are absolutely sure that you want to ignore the above files from talisman detectors,
+# consider pasting the following format in .talismanrc file in the project root
+---
+fileignoreconfig:
+- filename: .secrets.baseline
+  checksum: bda560d29e8cbc87c5d719b6aa8667ef7a31b1a32eebe364d46c956dd9b5c50c
+- filename: .yamllint.yaml
+  checksum: 268cb8045ae68ca3560f8feb149bfbfde96aaed8b38853e305d6de5d0221ab93
+- filename: .gitleaksignore
+  checksum: 4b660e9fd51628521516f09da79f982db5fd8d975f18322c0771dfb0a55bde1c
+- filename: .pre-commit-config.yaml
+  checksum: dd19c54b79febd9e9a593d71ef95b4a68caca54a3ad76e36eb42db5257709f64
+version: ""
