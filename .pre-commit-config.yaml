@@ -5,7 +5,7 @@
 # pre-commit run --all-files --verbose
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -43,13 +43,13 @@ repos:
         name: pre-commit-hooks (Lucas-C - useful git hooks)
 
   - repo: https://github.com/asottile/setup-cfg-fmt
-    rev: v2.5.0
+    rev: v2.7.0
     hooks:
       - id: setup-cfg-fmt
         name: setup-cfg-fmt (apply a consistent format to setup.cfg files)
 
   - repo: https://github.com/crate-ci/typos
-    rev: v1.19.0
+    rev: v1.27.0
     hooks:
       - id: typos
   # - id: typos-docker
@@ -70,7 +70,7 @@ repos:
         name: jenkinslint (basic Jenkinsfile linter)
 
   - repo: https://github.com/asottile/reorder-python-imports
-    rev: v3.12.0
+    rev: v3.14.0
     hooks:
       - id: reorder-python-imports
         name: reorder-python-imports (Tool for automatically reordering python imports)
@@ -97,14 +97,14 @@ repos:
   #       verbose: true
 
   - repo: https://github.com/PyCQA/flake8
-    rev: 7.0.0
+    rev: 7.1.1
     hooks:
       - id: flake8
         name: flake8 (Flake8 is a wrapper around these tools PyFlakes, pycodestyle, McCabe script)
     # Configure with tox.ini file in the root folder
 
   - repo: https://github.com/PyCQA/bandit
-    rev: 1.7.7
+    rev: 1.7.10
     hooks:
       - id: bandit
         name: bandit (security linter from PyCQA)
@@ -116,7 +116,7 @@ repos:
   #       name: prospector (Style Guide Enforcement)
 
   - repo: https://github.com/twu/skjold
-    rev: v0.6.1
+    rev: v0.6.2
     hooks:
       - id: skjold
         name: skjold (Security audit python project dependencies against several security advisory databases)
@@ -128,7 +128,7 @@ repos:
   #       name: import-linter (define and enforce rules for the imports within and between Python packages)
 
   - repo: https://github.com/hhatto/autopep8
-    rev: v2.0.4
+    rev: v2.3.1
     hooks:
       - id: autopep8
         name: autopep8 (Style Guide Enforcement)
@@ -141,7 +141,7 @@ repos:
         stages: [commit]
 
   - repo: https://github.com/Yelp/detect-secrets
-    rev: v1.4.0
+    rev: v1.5.0
     hooks:  # detect-secrets scan > .secrets.baseline | , '--disable-plugin', 'KeywordDetector'
       - id: detect-secrets
         name: detect-secrets (module for detecting secrets)
@@ -149,7 +149,7 @@ repos:
         # exclude: .secrets.baseline
 
   - repo: https://github.com/zricethezav/gitleaks
-    rev: v8.18.2
+    rev: v8.21.2
     hooks:
       - id: gitleaks
       # - id: gitleaks-docker
